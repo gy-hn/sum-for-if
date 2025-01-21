@@ -1,0 +1,28 @@
+#include <stdio.h>
+#pragma warning (disable:4996)
+void print_a_to_z_v1(void) {
+	printf("abcdefghijklmnopqrstuvwxyz\n");
+}
+void print_a_to_z_v2(void) {
+	char a = 97;
+	for (int i = a; i < 97 + 26; i++) {
+		printf("%c", i);
+	}
+	printf("\n");
+}
+void print_a_to_z_v3(void) {
+	char c = 'a';
+	for (char a = 'a'; a <= 'z'; a++) {
+		printf("%c", a);
+	}
+	printf("\n");
+}
+int main (void) {
+	printf("== 정답 v1 ==\n");
+	print_a_to_z_v1();
+	printf("== 정답 v2 ==\n");
+	print_a_to_z_v2();
+	printf("== 정답 v3 ==\n");
+	print_a_to_z_v3();
+	return 0;
+}
